@@ -1,25 +1,32 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f0f0f0;
-  padding: 20px;
-}
-h1 { margin-bottom: 20px; }
-.flipbook { width: 600px; height: 400px; position: relative; }
-.page {
-  width: 100%;
-  height: 100%;
-  background: white;
-  position: absolute;
-  top: 0; left: 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  display: none;
-}
-.page.active { display: block; }
-.controls { margin-top: 20px; }
-button { padding: 10px 20px; margin: 0 10px; font-size: 16px; cursor: pointer; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Articles of Constitution - Flipbook</title>
+<link rel="stylesheet" href="style.css">
+const firebaseConfig = {
+  apiKey: "AIzaSyAC05LF4Si1VyWb7Kfi5s9n-KZkHJ5s0qU",
+  authDomain: "flip-book-23536.firebaseapp.com",
+  projectId: "flip-book-23536",
+  storageBucket: "flip-book-23536.firebasestorage.app",
+  messagingSenderId: "684417032523",
+  appId: "1:684417032523:web:3a36bd03a59f4fe607c8ce",
+  measurementId: "G-QXBC3Q054R"
+};
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<h1>Articles of Constitution - Flipbook</h1>
+
+<div class="flipbook"></div>
+
+<div class="controls">
+  <button id="prev">Previous Page</button>
+  <button id="next">Next Page</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
