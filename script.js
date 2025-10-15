@@ -1,15 +1,4 @@
-const firebaseConfig = {
-  apiKey: "AIzaSyAC05LF4Si1VyWb7Kfi5s9n-KZkHJ5s0qU",
-  authDomain: "flip-book-23536.firebaseapp.com",
-  projectId: "flip-book-23536",
-  storageBucket: "flip-book-23536.firebasestorage.app",
-  messagingSenderId: "684417032523",
-  appId: "1:684417032523:web:3a36bd03a59f4fe607c8ce",
-  measurementId: "G-QXBC3Q054R"
-};
-firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
-
 const flipbook = document.querySelector('.flipbook');
 const totalPages = 30;
 let current = 0;
@@ -53,7 +42,7 @@ document.getElementById('next').addEventListener('click', () => {
 // Show first page initially
 showPage(current);
 
-// --- Load Firestore data and listen for updates ---
+// Load Firestore data and listen for updates
 for (let i = 0; i < totalPages; i++) {
   db.collection('flipbook').doc(`page-${i}`).onSnapshot(doc => {
     if (doc.exists) {

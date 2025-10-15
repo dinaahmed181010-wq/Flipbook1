@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Articles of Constitution - Flipbook</title>
-<link rel="stylesheet" href="style.css">
-const firebaseConfig = {
-  apiKey: "AIzaSyAC05LF4Si1VyWb7Kfi5s9n-KZkHJ5s0qU",
-  authDomain: "flip-book-23536.firebaseapp.com",
-  projectId: "flip-book-23536",
-  storageBucket: "flip-book-23536.firebasestorage.app",
-  messagingSenderId: "684417032523",
-  appId: "1:684417032523:web:3a36bd03a59f4fe607c8ce",
-  measurementId: "G-QXBC3Q054R"
-};
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Articles of Constitution - Flipbook</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase Libraries -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Configuration -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAC05LF4Si1VyWb7Kfi5s9n-KZkHJ5s0qU",
+      authDomain: "flip-book-23536.firebaseapp.com",
+      projectId: "flip-book-23536",
+      storageBucket: "flip-book-23536.firebasestorage.app",
+      messagingSenderId: "684417032523",
+      appId: "1:684417032523:web:3a36bd03a59f4fe607c8ce",
+      measurementId: "G-QXBC3Q054R"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 </head>
 <body>
-<h1>Articles of Constitution - Flipbook</h1>
+  <h1>Articles of Constitution - Flipbook</h1>
 
-<div class="flipbook"></div>
+  <div class="flipbook"></div>
 
-<div class="controls">
-  <button id="prev">Previous Page</button>
-  <button id="next">Next Page</button>
-</div>
+  <div class="controls">
+    <button id="prev">Previous Page</button>
+    <button id="next">Next Page</button>
+  </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
